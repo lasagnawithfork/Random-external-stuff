@@ -1,44 +1,28 @@
 #pragma once
 /* =============================================================
-/*                       theo's offsets
-/*                  https://offsets.imtheo.lol
+/*                       theo's offsets                         
+/*                  https://offsets.imtheo.lol                  
 /* -------------------------------------------------------------
-/*  Dumped With     : RbxDumperV2
-/*  Roblox Version  : version-145f189a6a974303
+/*  Dumped With     : RbxDumperV2                               
+/*  Roblox Version  : version-f5a60436d48947d3
 /*  Dumper Version  : 2.1.7
-/*  Dumped At       : 00:47 28/07/2026 (GMT)
-/*  Total Offsets   : 393
+/*  Dumped At       : 19:36 27/08/2026 (GMT)
+/*  Total Offsets   : 388
 /* -------------------------------------------------------------
-/*  Join the discord!
-/*  https://offsets.imtheo.lol/discord
+/*  Join the discord!                                           
+/*  https://offsets.imtheo.lol/discord                          
 /* =============================================================
 */
 
 #include <cstdint>
 #include <string>
-#include "Vector.hpp"
-
 namespace Structs {
-    using ::Vector2;
-    using ::Vector3;
-    using ::Vector4;
-    using ::Vector2int16;
-    using ::Matrix3x3;
-    using ::Matrix4x4;
-    using ::ViewMatrix_t;
-    using ::UDim;
-    using ::UDim2;
-    using ::WorldToScreen;
-    using ::world2screen;
-
-    inline std::string ClientVersion = "version-145f189a6a974303";
+    inline std::string ClientVersion = "version-f5a60436d48947d3";
 
     struct AirProperties {
-        char pad_0[24];
         float AirDensity;
-        char pad_1[32];
         Vector3 GlobalWind;
-    }; // sizeof = 72
+    }; // sizeof = 16
 
     struct AnimationTrack {
         char pad_0[184];
@@ -48,16 +32,16 @@ namespace Structs {
         float TimePosition;
         char pad_2[9];
         bool Looped;
-        char pad_3[34];
+        char pad_3[42];
         uintptr_t Animator;
-        char pad_4[1247];
+        char pad_4[2368];
         bool IsPlaying;
-    }; // sizeof = 1520
+    }; // sizeof = 2649
 
     struct Animator {
-        char pad_0[2944];
+        char pad_0[2896];
         uintptr_t ActiveAnimations;
-    }; // sizeof = 2952
+    }; // sizeof = 2904
 
     struct Atmosphere {
         char pad_0[208];
@@ -72,33 +56,20 @@ namespace Structs {
         Vector3 Position;
     }; // sizeof = 208
 
-    struct Attribute {
-        uintptr_t Key;
-        char pad_0[16];
-        uintptr_t Value;
-        char pad_1[56];
-        uintptr_t Size;
-    }; // sizeof = 96
-
-    struct AttributesMap {
-        uintptr_t Length;
-        char pad_0[8];
-        uintptr_t Attributes;
-    }; // sizeof = 24
-
     struct BasePart {
-        char pad_0[204];
+        char pad_0[268];
         float Reflectance;
+        char pad_1[32];
         float Transparency;
-        char pad_1[1];
+        char pad_2[1];
         bool CastShadow;
         bool Locked;
         bool Massless;
-        char pad_2[80];
+        char pad_3[80];
         uintptr_t Primitive;
-        char pad_3[41];
+        char pad_4[41];
         int Shape;
-    }; // sizeof = 349
+    }; // sizeof = 445
 
     struct Beam {
         char pad_0[352];
@@ -153,10 +124,10 @@ namespace Structs {
         int CameraType;
         char pad_3[4];
         float FieldOfView;
-        char pad_4[388];
+        char pad_4[392];
         Vector2 ViewportSize;
         float ImagePlaneDepth;
-    }; // sizeof = 724
+    }; // sizeof = 728
 
     struct CharacterMesh {
         char pad_0[328];
@@ -191,9 +162,9 @@ namespace Structs {
         uintptr_t ToRenderView2;
         char pad_1[24];
         uintptr_t ToRenderView3;
-        char pad_2[304];
+        char pad_2[296];
         uintptr_t Workspace;
-        char pad_3[24];
+        char pad_3[32];
         uintptr_t CreatorId;
         uintptr_t GameId;
         uintptr_t PlaceId;
@@ -201,13 +172,13 @@ namespace Structs {
         int PlaceVersion;
         char pad_5[24];
         uintptr_t ToRenderView1;
-        char pad_6[496];
+        char pad_6[584];
         int PrimitiveCount;
-        char pad_7[124];
+        char pad_7[36];
         uintptr_t ScriptContext;
-        char pad_8[304];
+        char pad_8[392];
         uintptr_t GameLoaded;
-    }; // sizeof = 1408
+    }; // sizeof = 1496
 
     struct DepthOfFieldEffect {
         char pad_0[176];
@@ -237,34 +208,34 @@ namespace Structs {
     }; // sizeof = 708
 
     struct FakeDataModel {
-        char pad_0[464];
+        char pad_0[504];
         uintptr_t RealDataModel;
-    }; // sizeof = 472
+    }; // sizeof = 512
 
     struct GuiBase2D {
-        char pad_0[248];
+        char pad_0[232];
+        float AbsoluteRotation;
+        char pad_1[32];
         Vector2 AbsolutePosition;
         Vector2 AbsoluteSize;
-        char pad_1[112];
-        float AbsoluteRotation;
-    }; // sizeof = 380
+    }; // sizeof = 284
 
     struct GuiObject {
-        char pad_0[376];
+        char pad_0[232];
         float Rotation;
-        char pad_1[15];
-        int ZIndex;
-        char pad_2[821];
+        char pad_1[984];
         bool ScreenGui_Enabled;
-        char pad_3[75];
+        char pad_2[75];
         UDim2 Position;
-        char pad_4[16];
+        char pad_3[16];
         UDim2 Size;
-        char pad_5[12];
+        char pad_4[12];
         float BackgroundTransparency;
-        char pad_6[48];
+        char pad_5[48];
         int LayoutOrder;
-        char pad_7[41];
+        char pad_6[32];
+        int ZIndex;
+        char pad_7[5];
         bool Visible;
     }; // sizeof = 1454
 
@@ -319,23 +290,23 @@ namespace Structs {
         double WalkTimer;
         char pad_15[104];
         uintptr_t HumanoidRootPart;
-        char pad_16[1048];
+        char pad_16[1088];
         int HumanoidState;
         char pad_17[163];
         bool IsWalking;
-    }; // sizeof = 2368
+    }; // sizeof = 2408
 
     struct Instance {
         char pad_0[8];
         uintptr_t This;
+        uintptr_t Name;
         uintptr_t ChildrenEnd;
         uintptr_t ClassDescriptor;
-        char pad_1[24];
-        uintptr_t ComponentMap;
-        char pad_2[40];
+        char pad_1[64];
         uintptr_t Parent;
+        uintptr_t NameContainer;
         uintptr_t ChildrenStart;
-        char pad_3[312];
+        char pad_2[304];
         uintptr_t ClassBase;
     }; // sizeof = 440
 
@@ -353,19 +324,18 @@ namespace Structs {
         float GeographicLatitude;
         char pad_3[12];
         bool GlobalShadows;
-        char pad_4[27];
+        char pad_4[35];
         Vector3 LightDirection;
         int Source;
         Vector3 SunPosition;
         Vector3 MoonPosition;
         char pad_5[56];
         uintptr_t Sky;
-    }; // sizeof = 456
+    }; // sizeof = 464
 
     struct LocalScript {
-        char pad_0[400];
         uintptr_t ByteCode;
-    }; // sizeof = 408
+    }; // sizeof = 8
 
     struct MaterialColors {
     }; // sizeof = 0
@@ -406,12 +376,12 @@ namespace Structs {
     }; // sizeof = 608
 
     struct ModuleScript {
-        char pad_0[312];
         uintptr_t ByteCode;
-    }; // sizeof = 320
+    }; // sizeof = 8
 
     struct MouseService {
-        char pad_0[212];
+        float SensitivityPointer;
+        char pad_0[208];
         Vector2 MousePosition;
         char pad_1[20];
         uintptr_t InputObject;
@@ -459,15 +429,15 @@ namespace Structs {
         float MaxZoomDistance;
         float MinZoomDistance;
         int CameraMode;
-        char pad_6[28];
+        char pad_6[32];
         float HealthDisplayDistance;
         char pad_7[12];
         float NameDisplayDistance;
         char pad_8[8];
         int TeamColor;
-        char pad_9[3632];
+        char pad_9[3668];
         uintptr_t Mouse;
-    }; // sizeof = 4584
+    }; // sizeof = 4624
 
     struct PlayerConfigurer {
         uintptr_t Pointer;
@@ -489,11 +459,11 @@ namespace Structs {
         Vector3 AssemblyAngularVelocity;
         char pad_2[166];
         BYTE Flags;
-        char pad_3[1];
+        char pad_3[5];
         Vector3 Size;
-        char pad_4[68];
+        char pad_4[72];
         uintptr_t Owner;
-    }; // sizeof = 528
+    }; // sizeof = 536
 
     struct PrimitiveFlags {
     }; // sizeof = 0
@@ -512,10 +482,11 @@ namespace Structs {
     struct RenderJob {
         char pad_0[56];
         uintptr_t FakeDataModel;
-        char pad_1[392];
-        uintptr_t RealDataModel;
+        char pad_1[408];
         uintptr_t RenderView;
-    }; // sizeof = 472
+        char pad_2[16];
+        uintptr_t RealDataModel;
+    }; // sizeof = 504
 
     struct RenderView {
         char pad_0[8];
@@ -535,17 +506,16 @@ namespace Structs {
     }; // sizeof = 960
 
     struct Script {
-        char pad_0[400];
         uintptr_t ByteCode;
-    }; // sizeof = 408
+    }; // sizeof = 8
 
     struct ScriptContext {
     }; // sizeof = 0
 
     struct Seat {
-        char pad_0[432];
+        char pad_0[528];
         uintptr_t Occupant;
-    }; // sizeof = 440
+    }; // sizeof = 536
 
     struct Sky {
         char pad_0[568];
@@ -571,16 +541,13 @@ namespace Structs {
     }; // sizeof = 321
 
     struct SpawnLocation {
-        char pad_0[61];
-        bool AllowTeamChangeOnTouch;
-        char pad_1[111];
-        bool Neutral;
-        char pad_2[210];
+        char pad_0[480];
         int ForcefieldDuration;
         int TeamColor;
-        char pad_3[1];
+        bool AllowTeamChangeOnTouch;
         bool Enabled;
-    }; // sizeof = 394
+        bool Neutral;
+    }; // sizeof = 491
 
     struct SpecialMesh {
         char pad_0[196];
@@ -601,10 +568,10 @@ namespace Structs {
     }; // sizeof = 192
 
     struct SurfaceAppearance {
-        char pad_0[656];
+        char pad_0[496];
         int AlphaMode;
         float EmissiveStrength;
-    }; // sizeof = 664
+    }; // sizeof = 504
 
     struct TaskScheduler {
         char pad_0[176];
@@ -620,30 +587,25 @@ namespace Structs {
     }; // sizeof = 188
 
     struct Terrain {
-        char pad_0[392];
+        char pad_0[488];
         float GrassLength;
         char pad_1[4];
         float WaterReflectance;
         float WaterTransparency;
         float WaterWaveSize;
         float WaterWaveSpeed;
-        char pad_2[656];
+        char pad_2[688];
         uintptr_t MaterialColors;
-    }; // sizeof = 1080
+    }; // sizeof = 1208
 
     struct Textures {
     }; // sizeof = 0
 
-    // I requires change 44l 66l
-
-
     struct Tool {
-        char pad_0[357];
-        bool Enabled;
-        char pad_1[838];
+        char pad_0[1196];
         Vector3 Grip;
         bool CanBeDropped;
-        char pad_2[1];
+        bool Enabled;
         bool ManualActivationOnly;
         bool RequiresHandle;
     }; // sizeof = 1212
@@ -657,15 +619,13 @@ namespace Structs {
     }; // sizeof = 712
 
     struct VehicleSeat {
-        char pad_0[456];
+        char pad_0[552];
         float MaxSpeed;
-        char pad_1[4];
         float SteerFloat;
-        char pad_2[4];
         float ThrottleFloat;
         float Torque;
         float TurnSpeed;
-    }; // sizeof = 484
+    }; // sizeof = 572
 
     struct VisualEngine {
         char pad_0[384];
@@ -698,25 +658,22 @@ namespace Structs {
     }; // sizeof = 80
 
     struct Workspace {
-        char pad_0[1008];
+        char pad_0[872];
         uintptr_t World;
-        char pad_1[160];
+        char pad_1[296];
         uintptr_t CurrentCamera;
         char pad_2[24];
         double DistributedGameTime;
-        char pad_3[1264];
+        char pad_3[1288];
         float ReadOnlyGravity;
-    }; // sizeof = 2484
+    }; // sizeof = 2508
 
     struct World {
-        char pad_0[520];
-        float FallenPartsDestroyHeight;
-        char pad_1[4];
-        float Gravity;
-        char pad_2[4];
-        uintptr_t AirProperties;
-        char pad_3[1248];
         float worldStepsPerSec;
-    }; // sizeof = 1796
+        float FallenPartsDestroyHeight;
+        uintptr_t AirProperties;
+        char pad_0[420];
+        float Gravity;
+    }; // sizeof = 440
 
 }
