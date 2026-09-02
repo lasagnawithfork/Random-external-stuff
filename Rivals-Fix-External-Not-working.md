@@ -11,3 +11,5 @@ In theory if you fix the **"space"** which is created litterally in the director
 
 Either change ur function to FindFirstChildByClass
 or add a space support, I don't know yet. Since I haven't educated my self but I did allot of digging into it, and it seems to work when you properly do it.
+
+**TIP** look at : https://github.com/lasagnawithfork/Random-external-stuff/blob/main/instance/instance.cpp
